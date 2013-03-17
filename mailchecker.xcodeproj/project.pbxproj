@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		225FF67B16F51F6B00272708 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225FF67916F51F6B00272708 /* MainMenu.xib */; };
+		22EE827A16F5032A009BED8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EE827916F5032A009BED8B /* Cocoa.framework */; };
+		22EE827C16F5032A009BED8B /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EE827B16F5032A009BED8B /* MacRuby.framework */; };
+		22EE828516F5032A009BED8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22EE828316F5032A009BED8B /* InfoPlist.strings */; };
+		22EE828716F5032A009BED8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE828616F5032A009BED8B /* main.m */; };
+		22EE828F16F5032A009BED8B /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 22EE828E16F5032A009BED8B /* rb_main.rb */; };
+		22EE829116F5032A009BED8B /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 22EE829016F5032A009BED8B /* AppDelegate.rb */; };
+		22EE829B16F51D34009BED8B /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22EE829A16F51D34009BED8B /* images.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22EE827E16F5032A009BED8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22EE826E16F5032A009BED8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22EE827516F5032A009BED8B;
+			remoteInfo = mailchecker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		225FF67A16F51F6B00272708 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		22EE827616F5032A009BED8B /* mailchecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mailchecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EE827916F5032A009BED8B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		22EE827B16F5032A009BED8B /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		22EE828216F5032A009BED8B /* mailchecker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mailchecker-Info.plist"; sourceTree = "<group>"; };
+		22EE828416F5032A009BED8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		22EE828616F5032A009BED8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22EE828816F5032A009BED8B /* mailchecker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mailchecker-Prefix.pch"; sourceTree = "<group>"; };
+		22EE828E16F5032A009BED8B /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		22EE829016F5032A009BED8B /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		22EE829A16F51D34009BED8B /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = ../images.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22EE827316F5032A009BED8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EE827A16F5032A009BED8B /* Cocoa.framework in Frameworks */,
+				22EE827C16F5032A009BED8B /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22EE826D16F5032A009BED8B = {
+			isa = PBXGroup;
+			children = (
+				22EE828016F5032A009BED8B /* mailchecker */,
+				22EE827816F5032A009BED8B /* Frameworks */,
+				22EE827716F5032A009BED8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22EE827716F5032A009BED8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22EE827616F5032A009BED8B /* mailchecker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22EE827816F5032A009BED8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22EE827916F5032A009BED8B /* Cocoa.framework */,
+				22EE827B16F5032A009BED8B /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22EE828016F5032A009BED8B /* mailchecker */ = {
+			isa = PBXGroup;
+			children = (
+				22EE829A16F51D34009BED8B /* images.jpg */,
+				22EE829016F5032A009BED8B /* AppDelegate.rb */,
+				22EE828916F5032A009BED8B /* Resources */,
+				22EE828D16F5032A009BED8B /* Other Sources */,
+				22EE828116F5032A009BED8B /* Supporting Files */,
+			);
+			path = mailchecker;
+			sourceTree = "<group>";
+		};
+		22EE828116F5032A009BED8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22EE828216F5032A009BED8B /* mailchecker-Info.plist */,
+				22EE828316F5032A009BED8B /* InfoPlist.strings */,
+				22EE828616F5032A009BED8B /* main.m */,
+				22EE828816F5032A009BED8B /* mailchecker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22EE828916F5032A009BED8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				225FF67916F51F6B00272708 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		22EE828D16F5032A009BED8B /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				22EE828E16F5032A009BED8B /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		22EE827D16F5032A009BED8B /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 22EE829716F5032A009BED8B /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				22EE827F16F5032A009BED8B /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		22EE827516F5032A009BED8B /* mailchecker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22EE829416F5032A009BED8B /* Build configuration list for PBXNativeTarget "mailchecker" */;
+			buildPhases = (
+				22EE827216F5032A009BED8B /* Sources */,
+				22EE827316F5032A009BED8B /* Frameworks */,
+				22EE827416F5032A009BED8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mailchecker;
+			productName = mailchecker;
+			productReference = 22EE827616F5032A009BED8B /* mailchecker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22EE826E16F5032A009BED8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = crossagate;
+			};
+			buildConfigurationList = 22EE827116F5032A009BED8B /* Build configuration list for PBXProject "mailchecker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 22EE826D16F5032A009BED8B;
+			productRefGroup = 22EE827716F5032A009BED8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22EE827516F5032A009BED8B /* mailchecker */,
+				22EE827D16F5032A009BED8B /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22EE827416F5032A009BED8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EE828516F5032A009BED8B /* InfoPlist.strings in Resources */,
+				22EE828F16F5032A009BED8B /* rb_main.rb in Resources */,
+				22EE829116F5032A009BED8B /* AppDelegate.rb in Resources */,
+				22EE829B16F51D34009BED8B /* images.jpg in Resources */,
+				225FF67B16F51F6B00272708 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22EE827216F5032A009BED8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EE828716F5032A009BED8B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22EE827F16F5032A009BED8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22EE827516F5032A009BED8B /* mailchecker */;
+			targetProxy = 22EE827E16F5032A009BED8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		225FF67916F51F6B00272708 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225FF67A16F51F6B00272708 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		22EE828316F5032A009BED8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22EE828416F5032A009BED8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22EE829216F5032A009BED8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		22EE829316F5032A009BED8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		22EE829516F5032A009BED8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					/Library/Frameworks,
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mailchecker/mailchecker-Prefix.pch";
+				INFOPLIST_FILE = "mailchecker/mailchecker-Info.plist";
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		22EE829616F5032A009BED8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+					/Library/Frameworks,
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mailchecker/mailchecker-Prefix.pch";
+				INFOPLIST_FILE = "mailchecker/mailchecker-Info.plist";
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		22EE829816F5032A009BED8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		22EE829916F5032A009BED8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22EE827116F5032A009BED8B /* Build configuration list for PBXProject "mailchecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EE829216F5032A009BED8B /* Debug */,
+				22EE829316F5032A009BED8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22EE829416F5032A009BED8B /* Build configuration list for PBXNativeTarget "mailchecker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EE829516F5032A009BED8B /* Debug */,
+				22EE829616F5032A009BED8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22EE829716F5032A009BED8B /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EE829816F5032A009BED8B /* Debug */,
+				22EE829916F5032A009BED8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22EE826E16F5032A009BED8B /* Project object */;
+}

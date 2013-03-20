@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		225FF67B16F51F6B00272708 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225FF67916F51F6B00272708 /* MainMenu.xib */; };
+		225FF6AA16F95EBE00272708 /* prefs.rb in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6A916F95EBE00272708 /* prefs.rb */; };
+		225FF6AE16F9A33900272708 /* macruby_http.rb in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6AD16F9A33900272708 /* macruby_http.rb */; };
+		225FF6B116F9E98F00272708 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 225FF6B016F9E98F00272708 /* libsqlite3.dylib */; };
+		225FF6B516F9F49A00272708 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6B416F9F49A00272708 /* mail.png */; };
+		225FF6B716F9FC6700272708 /* data.rb in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6B616F9FC6700272708 /* data.rb */; };
 		22EE827A16F5032A009BED8B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EE827916F5032A009BED8B /* Cocoa.framework */; };
 		22EE827C16F5032A009BED8B /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22EE827B16F5032A009BED8B /* MacRuby.framework */; };
 		22EE828516F5032A009BED8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22EE828316F5032A009BED8B /* InfoPlist.strings */; };
 		22EE828716F5032A009BED8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EE828616F5032A009BED8B /* main.m */; };
 		22EE828F16F5032A009BED8B /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 22EE828E16F5032A009BED8B /* rb_main.rb */; };
 		22EE829116F5032A009BED8B /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 22EE829016F5032A009BED8B /* AppDelegate.rb */; };
-		22EE829B16F51D34009BED8B /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22EE829A16F51D34009BED8B /* images.jpg */; };
+		5662CDCF16FAC12400DBCD68 /* mailchecker.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5662CDCE16FABE3700DBCD68 /* mailchecker.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 
 /* Begin PBXFileReference section */
 		225FF67A16F51F6B00272708 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		225FF6A916F95EBE00272708 /* prefs.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = prefs.rb; sourceTree = "<group>"; };
+		225FF6AD16F9A33900272708 /* macruby_http.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = macruby_http.rb; sourceTree = "<group>"; };
+		225FF6B016F9E98F00272708 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		225FF6B416F9F49A00272708 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		225FF6B616F9FC6700272708 /* data.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = data.rb; sourceTree = "<group>"; };
 		22EE827616F5032A009BED8B /* mailchecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mailchecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EE827916F5032A009BED8B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		22EE827B16F5032A009BED8B /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -38,7 +48,7 @@
 		22EE828816F5032A009BED8B /* mailchecker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mailchecker-Prefix.pch"; sourceTree = "<group>"; };
 		22EE828E16F5032A009BED8B /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		22EE829016F5032A009BED8B /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
-		22EE829A16F51D34009BED8B /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpg; path = ../images.jpg; sourceTree = "<group>"; };
+		5662CDCE16FABE3700DBCD68 /* mailchecker.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mailchecker.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225FF6B116F9E98F00272708 /* libsqlite3.dylib in Frameworks */,
 				22EE827A16F5032A009BED8B /* Cocoa.framework in Frameworks */,
 				22EE827C16F5032A009BED8B /* MacRuby.framework in Frameworks */,
 			);
@@ -57,6 +68,7 @@
 		22EE826D16F5032A009BED8B = {
 			isa = PBXGroup;
 			children = (
+				225FF6B016F9E98F00272708 /* libsqlite3.dylib */,
 				22EE828016F5032A009BED8B /* mailchecker */,
 				22EE827816F5032A009BED8B /* Frameworks */,
 				22EE827716F5032A009BED8B /* Products */,
@@ -83,7 +95,9 @@
 		22EE828016F5032A009BED8B /* mailchecker */ = {
 			isa = PBXGroup;
 			children = (
-				22EE829A16F51D34009BED8B /* images.jpg */,
+				225FF6B616F9FC6700272708 /* data.rb */,
+				225FF6AD16F9A33900272708 /* macruby_http.rb */,
+				225FF6A916F95EBE00272708 /* prefs.rb */,
 				22EE829016F5032A009BED8B /* AppDelegate.rb */,
 				22EE828916F5032A009BED8B /* Resources */,
 				22EE828D16F5032A009BED8B /* Other Sources */,
@@ -95,6 +109,8 @@
 		22EE828116F5032A009BED8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5662CDCE16FABE3700DBCD68 /* mailchecker.sqlite */,
+				225FF6B416F9F49A00272708 /* mail.png */,
 				22EE828216F5032A009BED8B /* mailchecker-Info.plist */,
 				22EE828316F5032A009BED8B /* InfoPlist.strings */,
 				22EE828616F5032A009BED8B /* main.m */,
@@ -191,8 +207,12 @@
 				22EE828516F5032A009BED8B /* InfoPlist.strings in Resources */,
 				22EE828F16F5032A009BED8B /* rb_main.rb in Resources */,
 				22EE829116F5032A009BED8B /* AppDelegate.rb in Resources */,
-				22EE829B16F51D34009BED8B /* images.jpg in Resources */,
 				225FF67B16F51F6B00272708 /* MainMenu.xib in Resources */,
+				225FF6AA16F95EBE00272708 /* prefs.rb in Resources */,
+				225FF6AE16F9A33900272708 /* macruby_http.rb in Resources */,
+				225FF6B516F9F49A00272708 /* mail.png in Resources */,
+				225FF6B716F9FC6700272708 /* data.rb in Resources */,
+				5662CDCF16FAC12400DBCD68 /* mailchecker.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +328,7 @@
 				GCC_PREFIX_HEADER = "mailchecker/mailchecker-Prefix.pch";
 				INFOPLIST_FILE = "mailchecker/mailchecker-Info.plist";
 				New_Setting = "";
+				OTHER_LDFLAGS = "-lsqlite3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -327,6 +348,7 @@
 				GCC_PREFIX_HEADER = "mailchecker/mailchecker-Prefix.pch";
 				INFOPLIST_FILE = "mailchecker/mailchecker-Info.plist";
 				New_Setting = "";
+				OTHER_LDFLAGS = "-lsqlite3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -5,14 +5,14 @@
 #  Created by Tokuhiro Matsuno on 1/4/13.
 #  Copyright 2013 Tokuhiro Matsuno. All rights reserved.
 #
+require "prefs.rb"
 
 class MenuHelper
     attr_reader :menu
-    
-    
+
     def self.create(title, &block)
-    obj = self.new(title)
-    obj.instance_eval &block
+      obj = self.new(title)
+      obj.instance_eval &block
     return obj.menu
 end
 
@@ -25,7 +25,7 @@ end
 def item(title, &block)
     item = NSMenuItem.new()
     item.title  = title
-    
+
     # Create anonnymous class to receive event.
     receiver = Class.new()
     receiver.class_eval do
@@ -58,12 +58,28 @@ end
 end
 
 class AppDelegate
-     attr_accessor :window
+    attr_accessor :window
+    attr_accessor :server
+    attr_accessor :port
+    attr_accessor :user
+    attr_accessor :pass
+    attr_accessor :interval
 
     def ok_button(sender)
-       window.close
+
+      @prefs ||=  Prefs.new
+      @prefs.tap do |pr|
+        pr.server = server.stringValue()
+        pr.port = port.integerValue()
+        pr.user = user.stringValue()
+        pr.pass = pass.stringValue()
+        pr.interval = interval.integerValue()
+        AppData.new.save({server: pr.server, port: pr.port, user: pr.user, pass: pr.pass, interval: pr.interval})
+        pr.start
+      end
+      window.close
     end
-    
+
     def cancel_button(sender)
         window.close
     end
@@ -79,10 +95,21 @@ class AppDelegate
                 alert.addButtonWithTitle("Yeah!")
                 response = alert.runModal
             end
-            
+
             item 'Preferences' do |sender|
                 prefwindow.makeKeyAndOrderFront(sender)
                 prefwindow.orderFrontRegardless
+                #numberFormatter = NSNumberFormatter.new
+
+                #newAttributes = NSMutableDictionary.dictionary
+                
+                #numberFormatter.setFormat("###,##0;(###,##0)")
+                
+                #                [newAttributes setObject(NSColor.redColor, forKey:@"NSColor"];
+                #                [numberFormatter setTextAttributesForNegativeValues: newAttributes];
+                
+                
+                #port.cell.setFormatter(numberFormatter)
             end
             
             item 'Open URL' do |sender|
@@ -127,7 +154,7 @@ class AppDelegate
         status_bar = NSStatusBar.systemStatusBar
         status_item = status_bar.statusItemWithLength(NSVariableStatusItemLength)
         status_item.setMenu menu
-        img = NSImage.imageNamed 'images.jpg'
+        img = NSImage.imageNamed 'mail.png'
         status_item.setImage(img)
         # status_item.title = "StatusBarSample!"
         status_item.highlightMode = true

@@ -1,10 +1,8 @@
-# -*- coding: japanese-cp932 -*-
 #
 #  prefs.rb
 #  mailchecker
 #
 #  Created by cross on 2013/03/20.
-#  Copyright 2013年 crossagate. All rights reserved.
 #
 require 'uri'
 require 'json'
@@ -13,6 +11,8 @@ require 'data'
 
 class Prefs
   include MacRubyHelper::DownloadHelper
+  attr_accessor :observer
+
   attr_accessor :server
   attr_accessor :port
   attr_accessor :user
@@ -24,13 +24,15 @@ class Prefs
       @timer.invalidate
       @timer = nil
     end
-    @timer = NSTimer
-      .scheduledTimerWithTimeInterval(interval.to_i * 60,
-                                      target: self,
-                                      selector: "timerHandler:",
-                                      userInfo: nil,
-                                      repeats: true)
-    mailcheck
+    if interval.to_i > 0
+      @timer = NSTimer
+        .scheduledTimerWithTimeInterval(interval.to_i * 60,
+                                        target: self,
+                                        selector: "timerHandler:",
+                                        userInfo: nil,
+                                        repeats: true)
+      mailcheck
+    end
   end
 
   def timerHandler(obj)
@@ -39,9 +41,9 @@ class Prefs
 
   def mailcheck
     name, domain = user.split("@",2)
-    url = "https://#{server}:#{port}/webmail/rest/Message/#{domain}/#{name}?unseen=1"
+    url = "https://#{server}/webmail/rest/Message/#{domain}/#{name}?unseen=1&folder=INBOX/**&folder=NORMAL/**"
     puts url
-    download url do |mr|
+    download(url, {:credential => {:user => user, :password => pass}}) do |mr|
       # The response object has 3 accessors: status_code, headers and body
       NSLog("status: #{mr.status_code}, Headers: #{mr.headers.inspect}")
       err = Pointer.new('@');
@@ -50,9 +52,7 @@ class Prefs
         puts err[0].description
         raise
       else
-        status_bar = NSStatusBar.systemStatusBar
-        status_item = status_bar.statusItemWithLength(NSVariableStatusItemLength)
-        status_item.setTitle(jsonArray.size)
+        @observer.findedUnseen(jsonArray)
       end
     end
   end

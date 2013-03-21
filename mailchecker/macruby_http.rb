@@ -318,9 +318,10 @@ def connection(connection, didReceiveAuthenticationChallenge:challenge)
         # NSURLCredentialPersistenceNone,
         # NSURLCredentialPersistenceForSession,
         # NSURLCredentialPersistencePermanent
-        new_credential = NSURLCredential.credentialWithUser(credential[:user], password:credential[:password], persistence:NSURLCredentialPersistenceForSession)
+        puts credential
+        new_credential = NSURLCredential.credentialWithUser(credential[:user], password:credential[:password], persistence:NSURLCredentialPersistenceNone)
         challenge.sender.useCredential(new_credential, forAuthenticationChallenge:challenge)
-        else
+    else
         challenge.sender.cancelAuthenticationChallenge(challenge)
         NSLog('Auth Failed :(')
     end

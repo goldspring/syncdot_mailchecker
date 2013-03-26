@@ -81,7 +81,8 @@ class AppDelegate
   end
 
   def findedUnseen(response)
-    @status_item.title = response['total']
+    puts response
+    @status_item.title = "#{response['total']}"
   end
 
   def cancel_button(sender)

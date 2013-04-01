@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220776101707285A0085DBF7 /* unseen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2207760F1707285A0085DBF7 /* unseen.png */; };
 		225FF67B16F51F6B00272708 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225FF67916F51F6B00272708 /* MainMenu.xib */; };
-		225FF6AA16F95EBE00272708 /* prefs.rb in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6A916F95EBE00272708 /* prefs.rb */; };
+		225FF6AA16F95EBE00272708 /* checker.rb in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6A916F95EBE00272708 /* checker.rb */; };
 		225FF6AE16F9A33900272708 /* macruby_http.rb in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6AD16F9A33900272708 /* macruby_http.rb */; };
 		225FF6B116F9E98F00272708 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 225FF6B016F9E98F00272708 /* libsqlite3.dylib */; };
 		225FF6B516F9F49A00272708 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 225FF6B416F9F49A00272708 /* mail.png */; };
@@ -33,8 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2207760F1707285A0085DBF7 /* unseen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unseen.png; sourceTree = "<group>"; };
 		225FF67A16F51F6B00272708 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		225FF6A916F95EBE00272708 /* prefs.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = prefs.rb; sourceTree = "<group>"; };
+		225FF6A916F95EBE00272708 /* checker.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = checker.rb; sourceTree = "<group>"; };
 		225FF6AD16F9A33900272708 /* macruby_http.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = macruby_http.rb; sourceTree = "<group>"; };
 		225FF6B016F9E98F00272708 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		225FF6B416F9F49A00272708 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -97,7 +99,7 @@
 			children = (
 				225FF6B616F9FC6700272708 /* data.rb */,
 				225FF6AD16F9A33900272708 /* macruby_http.rb */,
-				225FF6A916F95EBE00272708 /* prefs.rb */,
+				225FF6A916F95EBE00272708 /* checker.rb */,
 				22EE829016F5032A009BED8B /* AppDelegate.rb */,
 				22EE828916F5032A009BED8B /* Resources */,
 				22EE828D16F5032A009BED8B /* Other Sources */,
@@ -111,6 +113,7 @@
 			children = (
 				5662CDCE16FABE3700DBCD68 /* mailchecker.sqlite */,
 				225FF6B416F9F49A00272708 /* mail.png */,
+				2207760F1707285A0085DBF7 /* unseen.png */,
 				22EE828216F5032A009BED8B /* mailchecker-Info.plist */,
 				22EE828316F5032A009BED8B /* InfoPlist.strings */,
 				22EE828616F5032A009BED8B /* main.m */,
@@ -145,6 +148,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 				22EE827F16F5032A009BED8B /* PBXTargetDependency */,
 			);
@@ -208,11 +212,12 @@
 				22EE828F16F5032A009BED8B /* rb_main.rb in Resources */,
 				22EE829116F5032A009BED8B /* AppDelegate.rb in Resources */,
 				225FF67B16F51F6B00272708 /* MainMenu.xib in Resources */,
-				225FF6AA16F95EBE00272708 /* prefs.rb in Resources */,
+				225FF6AA16F95EBE00272708 /* checker.rb in Resources */,
 				225FF6AE16F9A33900272708 /* macruby_http.rb in Resources */,
 				225FF6B516F9F49A00272708 /* mail.png in Resources */,
 				225FF6B716F9FC6700272708 /* data.rb in Resources */,
 				5662CDCF16FAC12400DBCD68 /* mailchecker.sqlite in Resources */,
+				220776101707285A0085DBF7 /* unseen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -338,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = x86_64;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -357,12 +364,14 @@
 		22EE829816F5032A009BED8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		22EE829916F5032A009BED8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};

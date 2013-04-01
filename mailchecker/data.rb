@@ -46,6 +46,29 @@ class AppData
     datas
   end
 
+  def already_reports
+    setup
+    records = []
+    query = "select id, subject, timestamp from unseen;"
+    SQLite3::Database.new(@basePath).execute(query) do |row|
+      datas = {}
+      datas[:id] = row[0]
+      datas[:subject] = row[1]
+      datas[:timestamp] = row[2]
+      records << datas
+    end
+    records
+  end
+
+  def add_already_reports(msgs)
+    msgs.each do | msg |
+      query = "insert into unseen(id,subject,timestamp) values (?,?,?);"
+      stmt = SQLite3::Database.new(@basePath).prepare(query)
+      stmt.bind_params(msg[:id].to_i, msg[:subject].to_s, msg[:timestamp].to_s)
+      stmt.execute!
+    end
+  end
+
   def save(datas)
     setup
     begin

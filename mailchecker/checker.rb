@@ -2,7 +2,7 @@
 #  checker.rb
 #  mailchecker
 #
-#  Created by cross on 2013/03/20.
+#  Created by  on 2013/03/20.
 #
 require 'uri'
 require 'json'

@@ -2,8 +2,8 @@
 //  main.m
 //  mailchecker
 //
-//  Created by cross on 2013/03/17.
-//  Copyright (c) 2013年 crossagate. All rights reserved.
+//  Created by on 2013/03/17.
+//  Copyright (c) 2013. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

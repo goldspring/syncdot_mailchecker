@@ -183,7 +183,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = crossagate;
+				ORGANIZATIONNAME = aa;
 			};
 			buildConfigurationList = 22EE827116F5032A009BED8B /* Build configuration list for PBXProject "mailchecker" */;
 			compatibilityVersion = "Xcode 3.2";

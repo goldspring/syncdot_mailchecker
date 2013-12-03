@@ -2,8 +2,6 @@
 #  rb_main.rb
 #  mailchecker
 #
-#  Created by cross on 2013/03/17.
-#  Copyright (c) 2013年 crossagate. All rights reserved.
 #
 
 # Loading the Cocoa framework. If you need to load more frameworks, you can
